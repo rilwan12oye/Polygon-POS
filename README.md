@@ -43,18 +43,25 @@ contract PolyNFT is ERC721A {
 ```git clone https://github.com/rilwan12oye/Polygon-POS``` to clone the project. 
 After cloning the project on Github, do the following to get the code running on your computer.
 
-- Inside the project directory, in the terminal type: ```npm i``` to install all the necessary dependencies
+- Inside the project directory, in the terminal type:
+  ```npm i```
+  to install all the necessary dependencies
 - When all of the dependencies are downloaded, change the .env.example to .env and fill in all the necessary information. NOTE: Make sure you added .env into your .gitignore so you don't push your private key to GitHub.
-- Once these are done, go ahead to deploy your contract by running this command ```npx hardhat run scripts/metaNFT/deploy.js --network sepolia```. 
+- Once these are done, go ahead to deploy your contract by running this command
+  ```npx hardhat run scripts/metaNFT/deploy.js --network sepolia```. 
 - When you have deployed your contract, update your .env file by adding the newly deployed contract address.
-- Go ahead and batchMint by running this command ```npx hardhat run scripts/metaNFT/batchMint.js --network sepolia```. This will mint all the NFTs to your address.
-- When the minting is done, go ahead and approve and transfer to the Polygon chain by running the following command ```run scripts/metaNFT/approveTransfer.js --network sepolia```. 
+- Go ahead and batchMint by running this command
+  ```npx hardhat run scripts/metaNFT/batchMint.js --network sepolia```.
+  This will mint all the NFTs to your address.
+- When the minting is done, go ahead and approve and transfer to the Polygon chain by running the following command
+  ```run scripts/metaNFT/approveTransfer.js --network sepolia```. 
 - It will take about 20-30minutes before the transaction reflects on Polygon.
 - After about 20-30minutes and the transaction has reflected, copy the amoy contract address, paste it in the ```getBalance.js``` file where you have...
  ```javascript
   const polygonContract = "0x784e1648d9e045949E37089aB40065d9Fb203a35";
   ```
-- Once that is done, check the balance on Polygon by running this command ```npx hardhat run scripts/metaNFT/getBalance.js --network amoy```
+- Once that is done, check the balance on Polygon by running this command
+  ```npx hardhat run scripts/metaNFT/getBalance.js --network amoy```
 
 ## Authors
 Rilwan Oyewole
