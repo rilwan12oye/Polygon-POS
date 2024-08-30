@@ -16,7 +16,7 @@ contract PolyNFT is ERC721A {
     }
 
     function promptDescription() external pure returns (string memory) {
-        return "This is a set of cute but powerful ninja cats";
+        return "These are bikes with steeze!";
     }
 
     function balanceOf(address owner) public view override returns (uint256) {

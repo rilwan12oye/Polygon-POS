@@ -19,7 +19,7 @@ async function main() {
 
   await approveTx.wait();
 
-  console.log("Approval done!");
+  console.log("Step 1: Approval done!");
 
   const fxRootContract = await hre.ethers.getContractAt(
     fxERC721RootContractABI,
@@ -31,11 +31,9 @@ async function main() {
       .connect(deployer)
       .deposit(CONTRACT_ADDRESS, ACCOUNT_ADDRESS, i, "0x6566");
     await depositTx.wait();
-
-    console.log(`NFTs transfterred from Sepolia to Polygon successfully`);
   }
 
-  // console.log("NFT transfterred to Polygon successfully");
+  console.log(`Step 2: NFTs transfterred from Sepolia to Polygon successfully`);
 }
 
 main().catch((error) => {

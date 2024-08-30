@@ -11,8 +11,7 @@ async function main() {
   await mintTx.wait();
 
   console.log(`
-    ${await polyNFT.balanceOf(ACCOUNT_ADDRESS)} PolyNFTs
-    was minted to 
+    ${await polyNFT.balanceOf(ACCOUNT_ADDRESS)} PolyNFTs was minted to 
     ${ACCOUNT_ADDRESS}
     `);
 }
